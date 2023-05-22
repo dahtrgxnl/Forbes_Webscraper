@@ -10,13 +10,11 @@ driver = webdriver.Chrome(service=service)
 url = "https://milton.nutrislice.com/menu/forbes/dinner/2023-05-22"
 driver.get(url)
 
-# Click the button to view the menus. You'll need to replace 'button-id' with the actual ID of the button.
-# If the button doesn't have an ID, you might be able to use its class or XPath instead.
+#Clicks the button to continue to the menu screen
 button = driver.find_element("css selector", ".primary")
 button.click()
 
-# Wait for the page to load after clicking the button. This isn't always necessary, but can help avoid issues
-# if the page takes a while to load the menus. You might need to adjust the number of seconds to wait.
+#Waits for the page to load
 import time
 time.sleep(10)
 
@@ -36,5 +34,5 @@ for item in menu_items:
 # Extract the information you want from each menu item
 print(menu_items)
 
-# Close the Selenium driver
+
 driver.quit()
