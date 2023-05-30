@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
 # Set up a Selenium driver
-service = Service('/Users/alexanderlandis-arnold/Downloads/chromedriver_mac64/chromedriver')
+service = Service('your-chrome-driver')
 driver = webdriver.Chrome(service=service)
 
 # Open the URL
